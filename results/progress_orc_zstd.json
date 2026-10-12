@@ -1,0 +1,41 @@
+{
+  "format": "ORC",
+  "codec": "ZSTD",
+  "sf": 1,
+  "data_bytes": 161143447,
+  "files": 4,
+  "source_rows": 6001215,
+  "meta_bytes": 8486,
+  "gb": 0.1500765299424529,
+  "write_sec": 19.552706459071487,
+  "write_query_id": "20261012_140143_00006_i4su5",
+  "reads": [
+    {
+      "repeat": 1,
+      "cold_sec": 3.1356399171054363,
+      "warm_sec": 1.8051190408878028,
+      "cold_query_id": "20261012_140213_00003_dyq4a",
+      "warm_query_id": "20261012_140216_00004_dyq4a",
+      "rows": 57,
+      "sha256": "e539f1cadf0f130d11445dfe2018f1a843d45562b57cb848b43c6b454e43137c"
+    },
+    {
+      "repeat": 2,
+      "cold_sec": 3.0920915422029793,
+      "warm_sec": 1.5647571249864995,
+      "cold_query_id": "20261012_140230_00004_r7fp8",
+      "warm_query_id": "20261012_140234_00005_r7fp8",
+      "rows": 57,
+      "sha256": "e539f1cadf0f130d11445dfe2018f1a843d45562b57cb848b43c6b454e43137c"
+    },
+    {
+      "repeat": 3,
+      "cold_sec": 3.1178133338689804,
+      "warm_sec": 1.6757665001787245,
+      "cold_query_id": "20261012_140247_00004_7j7uu",
+      "warm_query_id": "20261012_140250_00005_7j7uu",
+      "rows": 57,
+      "sha256": "e539f1cadf0f130d11445dfe2018f1a843d45562b57cb848b43c6b454e43137c"
+    }
+  ]
+}

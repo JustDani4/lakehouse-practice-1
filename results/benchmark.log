@@ -1,0 +1,235 @@
+reference-q18: 4.874s, rows=57, id=20261012_135217_00010_99kr8
+=== parquet_none ===
+codec: 0.674s, rows=1, id=20261012_135222_00011_99kr8
+write-parquet_none: 36.371s, rows=1, id=20261012_135223_00012_99kr8
+files-parquet_none: 0.516s, rows=1, id=20261012_135300_00013_99kr8
+manifests-parquet_none: 0.118s, rows=1, id=20261012_135300_00014_99kr8
+ Container vodnev-lakehouse-trino-1 Restarting 
+ Container vodnev-lakehouse-minio-1 Restarting 
+ Container vodnev-lakehouse-minio-1 Started 
+ Container vodnev-lakehouse-trino-1 Started 
+ready: 0.423s, rows=1, id=20261012_135311_00002_m7zdp
+parquet_none-cold-1: 3.564s, rows=57, id=20261012_135311_00003_m7zdp
+parquet_none-warm-1: 1.733s, rows=57, id=20261012_135315_00004_m7zdp
+ Container vodnev-lakehouse-trino-1 Restarting 
+ Container vodnev-lakehouse-minio-1 Restarting 
+ Container vodnev-lakehouse-minio-1 Started 
+ Container vodnev-lakehouse-trino-1 Started 
+ready: 0.377s, rows=1, id=20261012_135325_00002_rhvhy
+parquet_none-cold-2: 3.587s, rows=57, id=20261012_135325_00003_rhvhy
+parquet_none-warm-2: 1.597s, rows=57, id=20261012_135329_00004_rhvhy
+ Container vodnev-lakehouse-minio-1 Restarting 
+ Container vodnev-lakehouse-trino-1 Restarting 
+ Container vodnev-lakehouse-minio-1 Started 
+ Container vodnev-lakehouse-trino-1 Started 
+ready: 0.450s, rows=1, id=20261012_135339_00002_6kc2t
+parquet_none-cold-3: 3.434s, rows=57, id=20261012_135339_00003_6kc2t
+parquet_none-warm-3: 2.194s, rows=57, id=20261012_135343_00004_6kc2t
+=== parquet_snappy ===
+codec: 0.723s, rows=1, id=20261012_135345_00005_6kc2t
+write-parquet_snappy: 18.861s, rows=1, id=20261012_135346_00006_6kc2t
+files-parquet_snappy: 0.350s, rows=1, id=20261012_135405_00007_6kc2t
+manifests-parquet_snappy: 0.073s, rows=1, id=20261012_135405_00008_6kc2t
+ Container vodnev-lakehouse-minio-1 Restarting 
+ Container vodnev-lakehouse-trino-1 Restarting 
+ Container vodnev-lakehouse-minio-1 Started 
+ Container vodnev-lakehouse-trino-1 Started 
+ready: 0.491s, rows=1, id=20261012_135416_00003_2kk73
+Traceback (most recent call last):
+  File "/Users/dani4/Documents/Codex/2026-10-07/new-chat-2/outputs/lakehouse-vodnev/bench_codecs.py", line 88, in <module>
+    main()
+  File "/Users/dani4/Documents/Codex/2026-10-07/new-chat-2/outputs/lakehouse-vodnev/bench_codecs.py", line 61, in main
+    cold_rows, cold, _, cold_id = query(q18(table), f"{slug}-cold-{n}")
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dani4/Documents/Codex/2026-10-07/new-chat-2/outputs/lakehouse-vodnev/lakehouse.py", line 49, in query
+    cursor.execute(sql)
+  File "/Users/dani4/Documents/Codex/2026-10-07/new-chat-2/work/lakehouse-venv/lib/python3.12/site-packages/trino/dbapi.py", line 670, in execute
+    self._iterator = iter(self._query.execute())
+                          ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dani4/Documents/Codex/2026-10-07/new-chat-2/work/lakehouse-venv/lib/python3.12/site-packages/trino/client.py", line 1026, in execute
+    new_rows = self.fetch()
+               ^^^^^^^^^^^^
+  File "/Users/dani4/Documents/Codex/2026-10-07/new-chat-2/work/lakehouse-venv/lib/python3.12/site-packages/trino/client.py", line 1080, in fetch
+    status = self._request.process(response)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dani4/Documents/Codex/2026-10-07/new-chat-2/work/lakehouse-venv/lib/python3.12/site-packages/trino/client.py", line 770, in process
+    raise self._process_error(response["error"], response.get("id"))
+trino.exceptions.TrinoQueryError: TrinoQueryError(type=INTERNAL_ERROR, name=GENERIC_INTERNAL_ERROR, message="No nodes available", query_id=20261012_135417_00004_2kk73)
+=== parquet_snappy ===
+ Container vodnev-lakehouse-minio-1 Restarting 
+ Container vodnev-lakehouse-trino-1 Restarting 
+ Container vodnev-lakehouse-minio-1 Started 
+ Container vodnev-lakehouse-trino-1 Started 
+ready-worker: 1.897s, rows=1, id=20261012_135447_00002_qxuvp
+parquet_snappy-cold-1: 3.330s, rows=57, id=20261012_135449_00003_qxuvp
+parquet_snappy-warm-1: 1.718s, rows=57, id=20261012_135453_00004_qxuvp
+ Container vodnev-lakehouse-trino-1 Restarting 
+ Container vodnev-lakehouse-minio-1 Restarting 
+ Container vodnev-lakehouse-minio-1 Started 
+ Container vodnev-lakehouse-trino-1 Started 
+ready-worker: 1.764s, rows=1, id=20261012_135505_00003_64byi
+parquet_snappy-cold-2: 3.290s, rows=57, id=20261012_135507_00004_64byi
+parquet_snappy-warm-2: 1.782s, rows=57, id=20261012_135510_00005_64byi
+ Container vodnev-lakehouse-minio-1 Restarting 
+ Container vodnev-lakehouse-trino-1 Restarting 
+ Container vodnev-lakehouse-minio-1 Started 
+ Container vodnev-lakehouse-trino-1 Started 
+ready-worker: 1.812s, rows=1, id=20261012_135522_00002_c2gra
+parquet_snappy-cold-3: 3.300s, rows=57, id=20261012_135524_00003_c2gra
+parquet_snappy-warm-3: 2.168s, rows=57, id=20261012_135527_00004_c2gra
+=== parquet_gzip ===
+codec: 0.764s, rows=1, id=20261012_135529_00005_c2gra
+write-parquet_gzip: 27.883s, rows=1, id=20261012_135530_00006_c2gra
+files-parquet_gzip: 0.227s, rows=1, id=20261012_135558_00007_c2gra
+manifests-parquet_gzip: 0.072s, rows=1, id=20261012_135558_00008_c2gra
+ Container vodnev-lakehouse-trino-1 Restarting 
+ Container vodnev-lakehouse-minio-1 Restarting 
+ Container vodnev-lakehouse-minio-1 Started 
+ Container vodnev-lakehouse-trino-1 Started 
+ready-worker: 1.806s, rows=1, id=20261012_135608_00002_9kmt5
+parquet_gzip-cold-1: 3.210s, rows=57, id=20261012_135610_00003_9kmt5
+parquet_gzip-warm-1: 2.379s, rows=57, id=20261012_135613_00004_9kmt5
+ Container vodnev-lakehouse-trino-1 Restarting 
+ Container vodnev-lakehouse-minio-1 Restarting 
+ Container vodnev-lakehouse-minio-1 Started 
+ Container vodnev-lakehouse-trino-1 Started 
+ready-worker: 1.560s, rows=1, id=20261012_135624_00002_f2t3n
+parquet_gzip-cold-2: 3.732s, rows=57, id=20261012_135625_00003_f2t3n
+parquet_gzip-warm-2: 1.829s, rows=57, id=20261012_135629_00004_f2t3n
+ Container vodnev-lakehouse-trino-1 Restarting 
+ Container vodnev-lakehouse-minio-1 Restarting 
+ Container vodnev-lakehouse-minio-1 Started 
+ Container vodnev-lakehouse-trino-1 Started 
+ready-worker: 1.510s, rows=1, id=20261012_135640_00002_2pa4i
+parquet_gzip-cold-3: 3.070s, rows=57, id=20261012_135641_00003_2pa4i
+parquet_gzip-warm-3: 1.752s, rows=57, id=20261012_135644_00004_2pa4i
+=== parquet_zstd ===
+codec: 0.545s, rows=1, id=20261012_135646_00005_2pa4i
+write-parquet_zstd: 13.913s, rows=1, id=20261012_135647_00006_2pa4i
+files-parquet_zstd: 0.179s, rows=1, id=20261012_135701_00007_2pa4i
+manifests-parquet_zstd: 0.077s, rows=1, id=20261012_135701_00008_2pa4i
+ Container vodnev-lakehouse-trino-1 Restarting 
+ Container vodnev-lakehouse-minio-1 Restarting 
+ Container vodnev-lakehouse-minio-1 Started 
+ Container vodnev-lakehouse-trino-1 Started 
+ready-worker: 1.587s, rows=1, id=20261012_135709_00002_3y5w6
+parquet_zstd-cold-1: 3.394s, rows=57, id=20261012_135711_00003_3y5w6
+parquet_zstd-warm-1: 2.124s, rows=57, id=20261012_135714_00004_3y5w6
+ Container vodnev-lakehouse-minio-1 Restarting 
+ Container vodnev-lakehouse-trino-1 Restarting 
+ Container vodnev-lakehouse-minio-1 Started 
+ Container vodnev-lakehouse-trino-1 Started 
+ready-worker: 1.363s, rows=1, id=20261012_135727_00003_xahxm
+parquet_zstd-cold-2: 3.542s, rows=57, id=20261012_135728_00004_xahxm
+parquet_zstd-warm-2: 1.799s, rows=57, id=20261012_135732_00005_xahxm
+ Container vodnev-lakehouse-trino-1 Restarting 
+ Container vodnev-lakehouse-minio-1 Restarting 
+ Container vodnev-lakehouse-minio-1 Started 
+ Container vodnev-lakehouse-trino-1 Started 
+ready-worker: 1.552s, rows=1, id=20261012_135743_00002_5xri5
+parquet_zstd-cold-3: 2.855s, rows=57, id=20261012_135744_00003_5xri5
+parquet_zstd-warm-3: 2.010s, rows=57, id=20261012_135747_00004_5xri5
+=== orc_none ===
+codec: 0.625s, rows=1, id=20261012_135749_00005_5xri5
+write-orc_none: 23.741s, rows=1, id=20261012_135750_00006_5xri5
+files-orc_none: 0.235s, rows=1, id=20261012_135814_00007_5xri5
+manifests-orc_none: 0.071s, rows=1, id=20261012_135814_00008_5xri5
+ Container vodnev-lakehouse-minio-1 Restarting 
+ Container vodnev-lakehouse-trino-1 Restarting 
+ Container vodnev-lakehouse-minio-1 Started 
+ Container vodnev-lakehouse-trino-1 Started 
+ready-worker: 1.606s, rows=1, id=20261012_135823_00002_gi8yh
+orc_none-cold-1: 3.733s, rows=57, id=20261012_135825_00003_gi8yh
+orc_none-warm-1: 2.145s, rows=57, id=20261012_135828_00004_gi8yh
+ Container vodnev-lakehouse-trino-1 Restarting 
+ Container vodnev-lakehouse-minio-1 Restarting 
+ Container vodnev-lakehouse-minio-1 Started 
+ Container vodnev-lakehouse-trino-1 Started 
+ready-worker: 2.072s, rows=1, id=20261012_135839_00002_2e7g5
+orc_none-cold-2: 4.129s, rows=57, id=20261012_135841_00003_2e7g5
+orc_none-warm-2: 2.471s, rows=57, id=20261012_135845_00004_2e7g5
+ Container vodnev-lakehouse-trino-1 Restarting 
+ Container vodnev-lakehouse-minio-1 Restarting 
+ Container vodnev-lakehouse-minio-1 Started 
+ Container vodnev-lakehouse-trino-1 Started 
+ready-worker: 1.507s, rows=1, id=20261012_135856_00002_y6pvf
+orc_none-cold-3: 3.979s, rows=57, id=20261012_135858_00003_y6pvf
+orc_none-warm-3: 3.026s, rows=57, id=20261012_135902_00004_y6pvf
+=== orc_snappy ===
+codec: 0.650s, rows=1, id=20261012_135905_00005_y6pvf
+write-orc_snappy: 18.944s, rows=1, id=20261012_135906_00006_y6pvf
+files-orc_snappy: 0.134s, rows=1, id=20261012_135925_00007_y6pvf
+manifests-orc_snappy: 0.073s, rows=1, id=20261012_135925_00008_y6pvf
+ Container vodnev-lakehouse-trino-1 Restarting 
+ Container vodnev-lakehouse-minio-1 Restarting 
+ Container vodnev-lakehouse-minio-1 Started 
+ Container vodnev-lakehouse-trino-1 Started 
+ready-worker: 2.241s, rows=1, id=20261012_135934_00002_wyeau
+orc_snappy-cold-1: 3.454s, rows=57, id=20261012_135936_00003_wyeau
+orc_snappy-warm-1: 2.147s, rows=57, id=20261012_135940_00004_wyeau
+ Container vodnev-lakehouse-minio-1 Restarting 
+ Container vodnev-lakehouse-trino-1 Restarting 
+ Container vodnev-lakehouse-minio-1 Started 
+ Container vodnev-lakehouse-trino-1 Started 
+ready-worker: 1.305s, rows=1, id=20261012_135953_00003_rtept
+orc_snappy-cold-2: 3.354s, rows=57, id=20261012_135954_00004_rtept
+orc_snappy-warm-2: 1.981s, rows=57, id=20261012_135957_00005_rtept
+ Container vodnev-lakehouse-trino-1 Restarting 
+ Container vodnev-lakehouse-minio-1 Restarting 
+ Container vodnev-lakehouse-minio-1 Started 
+ Container vodnev-lakehouse-trino-1 Started 
+ready-worker: 1.734s, rows=1, id=20261012_140008_00002_xj4k8
+orc_snappy-cold-3: 3.980s, rows=57, id=20261012_140010_00003_xj4k8
+orc_snappy-warm-3: 2.371s, rows=57, id=20261012_140014_00004_xj4k8
+=== orc_gzip ===
+codec: 0.793s, rows=1, id=20261012_140017_00005_xj4k8
+write-orc_gzip: 27.785s, rows=1, id=20261012_140017_00006_xj4k8
+files-orc_gzip: 0.241s, rows=1, id=20261012_140046_00007_xj4k8
+manifests-orc_gzip: 0.064s, rows=1, id=20261012_140046_00008_xj4k8
+ Container vodnev-lakehouse-minio-1 Restarting 
+ Container vodnev-lakehouse-trino-1 Restarting 
+ Container vodnev-lakehouse-minio-1 Started 
+ Container vodnev-lakehouse-trino-1 Started 
+ready-worker: 1.766s, rows=1, id=20261012_140101_00005_39wwy
+orc_gzip-cold-1: 3.750s, rows=57, id=20261012_140102_00006_39wwy
+orc_gzip-warm-1: 1.859s, rows=57, id=20261012_140106_00007_39wwy
+ Container vodnev-lakehouse-minio-1 Restarting 
+ Container vodnev-lakehouse-trino-1 Restarting 
+ Container vodnev-lakehouse-minio-1 Started 
+ Container vodnev-lakehouse-trino-1 Started 
+ready-worker: 1.637s, rows=1, id=20261012_140118_00002_6qigc
+orc_gzip-cold-2: 3.688s, rows=57, id=20261012_140119_00003_6qigc
+orc_gzip-warm-2: 2.201s, rows=57, id=20261012_140123_00004_6qigc
+ Container vodnev-lakehouse-trino-1 Restarting 
+ Container vodnev-lakehouse-minio-1 Restarting 
+ Container vodnev-lakehouse-minio-1 Started 
+ Container vodnev-lakehouse-trino-1 Started 
+ready-worker: 1.673s, rows=1, id=20261012_140134_00002_i4su5
+orc_gzip-cold-3: 4.337s, rows=57, id=20261012_140136_00003_i4su5
+orc_gzip-warm-3: 1.971s, rows=57, id=20261012_140140_00004_i4su5
+=== orc_zstd ===
+codec: 0.660s, rows=1, id=20261012_140142_00005_i4su5
+write-orc_zstd: 19.553s, rows=1, id=20261012_140143_00006_i4su5
+files-orc_zstd: 0.216s, rows=1, id=20261012_140203_00007_i4su5
+manifests-orc_zstd: 0.066s, rows=1, id=20261012_140203_00008_i4su5
+ Container vodnev-lakehouse-trino-1 Restarting 
+ Container vodnev-lakehouse-minio-1 Restarting 
+ Container vodnev-lakehouse-minio-1 Started 
+ Container vodnev-lakehouse-trino-1 Started 
+ready-worker: 1.652s, rows=1, id=20261012_140211_00002_dyq4a
+orc_zstd-cold-1: 3.136s, rows=57, id=20261012_140213_00003_dyq4a
+orc_zstd-warm-1: 1.805s, rows=57, id=20261012_140216_00004_dyq4a
+ Container vodnev-lakehouse-trino-1 Restarting 
+ Container vodnev-lakehouse-minio-1 Restarting 
+ Container vodnev-lakehouse-minio-1 Started 
+ Container vodnev-lakehouse-trino-1 Started 
+ready-worker: 1.300s, rows=1, id=20261012_140229_00003_r7fp8
+orc_zstd-cold-2: 3.092s, rows=57, id=20261012_140230_00004_r7fp8
+orc_zstd-warm-2: 1.565s, rows=57, id=20261012_140234_00005_r7fp8
+ Container vodnev-lakehouse-trino-1 Restarting 
+ Container vodnev-lakehouse-minio-1 Restarting 
+ Container vodnev-lakehouse-minio-1 Started 
+ Container vodnev-lakehouse-trino-1 Started 
+ready-worker: 1.304s, rows=1, id=20261012_140245_00003_7j7uu
+orc_zstd-cold-3: 3.118s, rows=57, id=20261012_140247_00004_7j7uu
+orc_zstd-warm-3: 1.676s, rows=57, id=20261012_140250_00005_7j7uu

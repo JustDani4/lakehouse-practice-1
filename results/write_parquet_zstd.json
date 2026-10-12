@@ -1,0 +1,13 @@
+{
+  "format": "PARQUET",
+  "codec": "ZSTD",
+  "sf": 1,
+  "data_bytes": 153229863,
+  "files": 4,
+  "source_rows": 6001215,
+  "meta_bytes": 8811,
+  "gb": 0.14270643051713705,
+  "write_sec": 13.913125707767904,
+  "write_query_id": "20261012_135647_00006_2pa4i",
+  "reads": []
+}

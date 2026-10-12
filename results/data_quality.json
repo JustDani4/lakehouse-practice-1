@@ -1,0 +1,9 @@
+{
+  "source_rows": 6001215,
+  "invalid_quantity": 0,
+  "invalid_price": 0,
+  "invalid_discount": 0,
+  "missing_order": 0,
+  "missing_customer": 0,
+  "invalid_shipdate": 0
+}

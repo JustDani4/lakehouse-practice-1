@@ -1,0 +1,13 @@
+{
+  "format": "ORC",
+  "codec": "ZSTD",
+  "sf": 1,
+  "data_bytes": 161143447,
+  "files": 4,
+  "source_rows": 6001215,
+  "meta_bytes": 8486,
+  "gb": 0.1500765299424529,
+  "write_sec": 19.552706459071487,
+  "write_query_id": "20261012_140143_00006_i4su5",
+  "reads": []
+}

@@ -1,0 +1,43 @@
+{
+  "format": "PARQUET",
+  "codec": "SNAPPY",
+  "sf": 1,
+  "data_bytes": 206808047,
+  "files": 4,
+  "source_rows": 6001215,
+  "meta_bytes": 8831,
+  "gb": 0.1926050027832389,
+  "write_sec": 18.861189417075366,
+  "write_query_id": "20261012_135346_00006_6kc2t",
+  "reads": [
+    {
+      "repeat": 1,
+      "cold_sec": 3.3298568329773843,
+      "warm_sec": 1.7180446251295507,
+      "cold_query_id": "20261012_135449_00003_qxuvp",
+      "warm_query_id": "20261012_135453_00004_qxuvp",
+      "rows": 57,
+      "sha256": "e539f1cadf0f130d11445dfe2018f1a843d45562b57cb848b43c6b454e43137c"
+    },
+    {
+      "repeat": 2,
+      "cold_sec": 3.2901205411180854,
+      "warm_sec": 1.781545499805361,
+      "cold_query_id": "20261012_135507_00004_64byi",
+      "warm_query_id": "20261012_135510_00005_64byi",
+      "rows": 57,
+      "sha256": "e539f1cadf0f130d11445dfe2018f1a843d45562b57cb848b43c6b454e43137c"
+    },
+    {
+      "repeat": 3,
+      "cold_sec": 3.2998237907886505,
+      "warm_sec": 2.167823040857911,
+      "cold_query_id": "20261012_135524_00003_c2gra",
+      "warm_query_id": "20261012_135527_00004_c2gra",
+      "rows": 57,
+      "sha256": "e539f1cadf0f130d11445dfe2018f1a843d45562b57cb848b43c6b454e43137c"
+    }
+  ],
+  "cold_sec": 3.2998237907886505,
+  "warm_sec": 1.781545499805361
+}

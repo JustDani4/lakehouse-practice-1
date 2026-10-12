@@ -1,0 +1,6 @@
+NAME                            IMAGE                                                COMMAND                  SERVICE      CREATED          STATUS                        PORTS
+vodnev-lakehouse-lakekeeper-1   quay.io/lakekeeper/catalog:v0.14.0                   "/home/nonroot/lakek…"   lakekeeper   23 minutes ago   Up 22 minutes (healthy)       127.0.0.1:18181->8181/tcp
+vodnev-lakehouse-minio-1        pgsty/silo:RELEASE.2026-09-03T13-18-01Z              "/usr/bin/docker-ent…"   minio        23 minutes ago   Up About a minute (healthy)   127.0.0.1:19000->9000/tcp, 127.0.0.1:19001->9001/tcp
+vodnev-lakehouse-postgres-1     postgres:17-alpine                                   "docker-entrypoint.s…"   postgres     23 minutes ago   Up 23 minutes (healthy)       5432/tcp
+vodnev-lakehouse-spark-1        apache/spark:3.5.7-scala2.12-java17-python3-ubuntu   "/bin/bash -c 'sleep…"   spark        21 minutes ago   Up 21 minutes                 
+vodnev-lakehouse-trino-1        trinodb/trino:476                                    "/usr/lib/trino/bin/…"   trino        21 minutes ago   Up 57 seconds (healthy)       127.0.0.1:18080->8080/tcp

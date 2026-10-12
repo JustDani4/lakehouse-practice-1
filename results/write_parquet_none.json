@@ -1,0 +1,13 @@
+{
+  "format": "PARQUET",
+  "codec": "NONE",
+  "sf": 1,
+  "data_bytes": 375162561,
+  "files": 4,
+  "source_rows": 6001215,
+  "meta_bytes": 8834,
+  "gb": 0.3493973622098565,
+  "write_sec": 36.37143537495285,
+  "write_query_id": "20261012_135223_00012_99kr8",
+  "reads": []
+}

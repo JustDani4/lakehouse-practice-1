@@ -1,0 +1,60 @@
+MEASUREMENT {"repeat": 0, "mode": "first", "seconds": 9.286966077999978, "rows": 57, "sha256": "e539f1cadf0f130d11445dfe2018f1a843d45562b57cb848b43c6b454e43137c"}
+MEASUREMENT {"repeat": 1, "mode": "warm", "seconds": 3.915617819999852, "rows": 57, "sha256": "e539f1cadf0f130d11445dfe2018f1a843d45562b57cb848b43c6b454e43137c"}
+MEASUREMENT {"repeat": 2, "mode": "warm", "seconds": 3.578546693000135, "rows": 57, "sha256": "e539f1cadf0f130d11445dfe2018f1a843d45562b57cb848b43c6b454e43137c"}
+MEASUREMENT {"repeat": 3, "mode": "warm", "seconds": 3.487287065000146, "rows": 57, "sha256": "e539f1cadf0f130d11445dfe2018f1a843d45562b57cb848b43c6b454e43137c"}
+26/10/12 14:04:41 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+26/10/12 14:04:41 INFO SparkContext: Running Spark version 3.5.7
+26/10/12 14:04:41 INFO SparkContext: OS info Linux, 6.8.0-100-generic, aarch64
+26/10/12 14:04:41 INFO SparkContext: Java version 17.0.16
+26/10/12 14:04:41 INFO ResourceUtils: ==============================================================
+26/10/12 14:04:41 INFO ResourceUtils: No custom resources configured for spark.driver.
+26/10/12 14:04:41 INFO ResourceUtils: ==============================================================
+26/10/12 14:04:41 INFO SparkContext: Submitted application: Vodnev-Q18-parquet_none
+26/10/12 14:04:42 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+26/10/12 14:04:42 INFO ResourceProfile: Limiting resource is cpu
+26/10/12 14:04:42 INFO ResourceProfileManager: Added ResourceProfile id: 0
+26/10/12 14:04:42 INFO SecurityManager: Changing view acls to: root
+26/10/12 14:04:42 INFO SecurityManager: Changing modify acls to: root
+26/10/12 14:04:42 INFO SecurityManager: Changing view acls groups to: 
+26/10/12 14:04:42 INFO SecurityManager: Changing modify acls groups to: 
+26/10/12 14:04:42 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: root; groups with view permissions: EMPTY; users with modify permissions: root; groups with modify permissions: EMPTY
+26/10/12 14:04:42 INFO Utils: Successfully started service 'sparkDriver' on port 45661.
+26/10/12 14:04:42 INFO SparkEnv: Registering MapOutputTracker
+26/10/12 14:04:42 INFO SparkEnv: Registering BlockManagerMaster
+26/10/12 14:04:42 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+26/10/12 14:04:42 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+26/10/12 14:04:42 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+26/10/12 14:04:42 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-fd25fcd3-21ed-4444-87b8-fa6db34a63ee
+26/10/12 14:04:42 INFO MemoryStore: MemoryStore started with capacity 434.4 MiB
+26/10/12 14:04:42 INFO SparkEnv: Registering OutputCommitCoordinator
+26/10/12 14:04:42 INFO SparkContext: Added JAR file:///opt/lab-jars/iceberg-spark-runtime-3.5_2.12-1.10.1.jar at spark://localhost:45661/jars/iceberg-spark-runtime-3.5_2.12-1.10.1.jar with timestamp 1791813881980
+26/10/12 14:04:42 INFO SparkContext: Added JAR file:///opt/lab-jars/iceberg-aws-bundle-1.10.1.jar at spark://localhost:45661/jars/iceberg-aws-bundle-1.10.1.jar with timestamp 1791813881980
+26/10/12 14:04:42 INFO Executor: Starting executor ID driver on host localhost
+26/10/12 14:04:42 INFO Executor: OS info Linux, 6.8.0-100-generic, aarch64
+26/10/12 14:04:42 INFO Executor: Java version 17.0.16
+26/10/12 14:04:42 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+26/10/12 14:04:42 INFO Executor: Created or updated repl class loader org.apache.spark.util.MutableURLClassLoader@4f1da6b0 for default.
+26/10/12 14:04:42 INFO Executor: Fetching spark://localhost:45661/jars/iceberg-spark-runtime-3.5_2.12-1.10.1.jar with timestamp 1791813881980
+26/10/12 14:04:42 INFO TransportClientFactory: Successfully created connection to localhost/127.0.0.1:45661 after 23 ms (0 ms spent in bootstraps)
+26/10/12 14:04:42 INFO Utils: Fetching spark://localhost:45661/jars/iceberg-spark-runtime-3.5_2.12-1.10.1.jar to /tmp/spark-d5e72035-b99f-44ba-9b98-44c40ca98026/userFiles-198c475a-51b5-443d-b981-057c1e4afd5e/fetchFileTemp17218182657853009046.tmp
+26/10/12 14:04:42 INFO Executor: Adding file:/tmp/spark-d5e72035-b99f-44ba-9b98-44c40ca98026/userFiles-198c475a-51b5-443d-b981-057c1e4afd5e/iceberg-spark-runtime-3.5_2.12-1.10.1.jar to class loader default
+26/10/12 14:04:42 INFO Executor: Fetching spark://localhost:45661/jars/iceberg-aws-bundle-1.10.1.jar with timestamp 1791813881980
+26/10/12 14:04:42 INFO Utils: Fetching spark://localhost:45661/jars/iceberg-aws-bundle-1.10.1.jar to /tmp/spark-d5e72035-b99f-44ba-9b98-44c40ca98026/userFiles-198c475a-51b5-443d-b981-057c1e4afd5e/fetchFileTemp13882062238458686204.tmp
+26/10/12 14:04:43 INFO Executor: Adding file:/tmp/spark-d5e72035-b99f-44ba-9b98-44c40ca98026/userFiles-198c475a-51b5-443d-b981-057c1e4afd5e/iceberg-aws-bundle-1.10.1.jar to class loader default
+26/10/12 14:04:43 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 40195.
+26/10/12 14:04:43 INFO NettyBlockTransferService: Server created on localhost:40195
+26/10/12 14:04:43 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+26/10/12 14:04:43 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, localhost, 40195, None)
+26/10/12 14:04:43 INFO BlockManagerMasterEndpoint: Registering block manager localhost:40195 with 434.4 MiB RAM, BlockManagerId(driver, localhost, 40195, None)
+26/10/12 14:04:43 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, localhost, 40195, None)
+26/10/12 14:04:43 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, localhost, 40195, None)
+26/10/12 14:04:51 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/12 14:04:51 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/12 14:04:51 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/12 14:04:55 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/12 14:04:55 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/12 14:04:55 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/12 14:04:59 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/12 14:04:59 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/12 14:05:02 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/12 14:05:02 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.

@@ -1,0 +1,13 @@
+{
+  "format": "ORC",
+  "codec": "NONE",
+  "sf": 1,
+  "data_bytes": 452619783,
+  "files": 4,
+  "source_rows": 6001215,
+  "meta_bytes": 8512,
+  "gb": 0.4215350216254592,
+  "write_sec": 23.741189083084464,
+  "write_query_id": "20261012_135750_00006_5xri5",
+  "reads": []
+}

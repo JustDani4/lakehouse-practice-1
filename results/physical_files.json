@@ -1,0 +1,322 @@
+[
+  {
+    "slug": "parquet_none",
+    "format": "parquet",
+    "expected_codec": "none",
+    "files": [
+      {
+        "path": "s3://bronze/lineitem_parquet_none-51df999439424802b5f0321145e0ffb5/data/20261012_135223_00012_99kr8-1c36f35c-f35a-466b-ae52-bb78729441ed.parquet",
+        "rows": 892296,
+        "bytes": 55187727,
+        "physical_compression": [
+          "UNCOMPRESSED"
+        ]
+      },
+      {
+        "path": "s3://bronze/lineitem_parquet_none-51df999439424802b5f0321145e0ffb5/data/20261012_135223_00012_99kr8-694c5b43-1af0-422b-8342-b188cf905254.parquet",
+        "rows": 1163077,
+        "bytes": 72499678,
+        "physical_compression": [
+          "UNCOMPRESSED"
+        ]
+      },
+      {
+        "path": "s3://bronze/lineitem_parquet_none-51df999439424802b5f0321145e0ffb5/data/20261012_135223_00012_99kr8-f7727166-f0d3-491d-8f89-59ac9fd0317c.parquet",
+        "rows": 1570844,
+        "bytes": 98566607,
+        "physical_compression": [
+          "UNCOMPRESSED"
+        ]
+      },
+      {
+        "path": "s3://bronze/lineitem_parquet_none-51df999439424802b5f0321145e0ffb5/data/20261012_135223_00012_99kr8-988a8fea-19e2-42e3-8605-14686c0c1ba9.parquet",
+        "rows": 2374998,
+        "bytes": 148908549,
+        "physical_compression": [
+          "UNCOMPRESSED"
+        ]
+      }
+    ],
+    "verified": true
+  },
+  {
+    "slug": "parquet_snappy",
+    "format": "parquet",
+    "expected_codec": "snappy",
+    "files": [
+      {
+        "path": "s3://bronze/lineitem_parquet_snappy-d72235594843421aa6b938781c7bdb47/data/20261012_135346_00006_6kc2t-112909f0-e92d-4f72-9813-bfdda333cbef.parquet",
+        "rows": 885514,
+        "bytes": 30779858,
+        "physical_compression": [
+          "SNAPPY"
+        ]
+      },
+      {
+        "path": "s3://bronze/lineitem_parquet_snappy-d72235594843421aa6b938781c7bdb47/data/20261012_135346_00006_6kc2t-c0fe93be-2120-4e42-b177-315fb82c6a18.parquet",
+        "rows": 1169902,
+        "bytes": 40450200,
+        "physical_compression": [
+          "SNAPPY"
+        ]
+      },
+      {
+        "path": "s3://bronze/lineitem_parquet_snappy-d72235594843421aa6b938781c7bdb47/data/20261012_135346_00006_6kc2t-8dd5c24e-de31-42cc-b356-c33b7e66b63a.parquet",
+        "rows": 1570933,
+        "bytes": 54107830,
+        "physical_compression": [
+          "SNAPPY"
+        ]
+      },
+      {
+        "path": "s3://bronze/lineitem_parquet_snappy-d72235594843421aa6b938781c7bdb47/data/20261012_135346_00006_6kc2t-3357afb2-ab85-4bd6-aa86-b593ddb0d273.parquet",
+        "rows": 2374866,
+        "bytes": 81470159,
+        "physical_compression": [
+          "SNAPPY"
+        ]
+      }
+    ],
+    "verified": true
+  },
+  {
+    "slug": "parquet_gzip",
+    "format": "parquet",
+    "expected_codec": "gzip",
+    "files": [
+      {
+        "path": "s3://bronze/lineitem_parquet_gzip-c8298127d3ce4041a131f8d28c8beafa/data/20261012_135530_00006_c2gra-5a99999a-19d4-4d69-aeb8-08bc4ffc2718.parquet",
+        "rows": 1169912,
+        "bytes": 29285986,
+        "physical_compression": [
+          "GZIP"
+        ]
+      },
+      {
+        "path": "s3://bronze/lineitem_parquet_gzip-c8298127d3ce4041a131f8d28c8beafa/data/20261012_135530_00006_c2gra-92c04f59-e848-4fd1-8549-74389b54b051.parquet",
+        "rows": 877658,
+        "bytes": 22133274,
+        "physical_compression": [
+          "GZIP"
+        ]
+      },
+      {
+        "path": "s3://bronze/lineitem_parquet_gzip-c8298127d3ce4041a131f8d28c8beafa/data/20261012_135530_00006_c2gra-b36812eb-257e-4042-a3cc-f05c865711e0.parquet",
+        "rows": 1578676,
+        "bytes": 39301723,
+        "physical_compression": [
+          "GZIP"
+        ]
+      },
+      {
+        "path": "s3://bronze/lineitem_parquet_gzip-c8298127d3ce4041a131f8d28c8beafa/data/20261012_135530_00006_c2gra-7ec2bad2-d03c-4380-b40f-1ea3414470e4.parquet",
+        "rows": 2374969,
+        "bytes": 58803261,
+        "physical_compression": [
+          "GZIP"
+        ]
+      }
+    ],
+    "verified": true
+  },
+  {
+    "slug": "parquet_zstd",
+    "format": "parquet",
+    "expected_codec": "zstd",
+    "files": [
+      {
+        "path": "s3://bronze/lineitem_parquet_zstd-bb308a79c2c3473b96279f017ca048bd/data/20261012_135647_00006_2pa4i-34bb340a-c84d-407b-bc10-6f52761aee68.parquet",
+        "rows": 1163156,
+        "bytes": 29825724,
+        "physical_compression": [
+          "ZSTD"
+        ]
+      },
+      {
+        "path": "s3://bronze/lineitem_parquet_zstd-bb308a79c2c3473b96279f017ca048bd/data/20261012_135647_00006_2pa4i-da1046ce-385c-4fe5-ba8f-38923a904465.parquet",
+        "rows": 888263,
+        "bytes": 22944112,
+        "physical_compression": [
+          "ZSTD"
+        ]
+      },
+      {
+        "path": "s3://bronze/lineitem_parquet_zstd-bb308a79c2c3473b96279f017ca048bd/data/20261012_135647_00006_2pa4i-7fae113d-1697-4015-8434-326b77357d93.parquet",
+        "rows": 1575063,
+        "bytes": 40176240,
+        "physical_compression": [
+          "ZSTD"
+        ]
+      },
+      {
+        "path": "s3://bronze/lineitem_parquet_zstd-bb308a79c2c3473b96279f017ca048bd/data/20261012_135647_00006_2pa4i-4ebe1fe5-29b7-418c-a22c-338e93ef5ed2.parquet",
+        "rows": 2374733,
+        "bytes": 60283787,
+        "physical_compression": [
+          "ZSTD"
+        ]
+      }
+    ],
+    "verified": true
+  },
+  {
+    "slug": "orc_none",
+    "format": "orc",
+    "expected_codec": "none",
+    "files": [
+      {
+        "path": "s3://bronze/lineitem_orc_none-3037e9d508774055a169572a0df2cd38/data/20261012_135750_00006_5xri5-dd0c97c3-66f9-460e-8ed1-4cc94603c573.orc",
+        "rows": 1169615,
+        "bytes": 88224115,
+        "physical_compression": [
+          "UNCOMPRESSED"
+        ]
+      },
+      {
+        "path": "s3://bronze/lineitem_orc_none-3037e9d508774055a169572a0df2cd38/data/20261012_135750_00006_5xri5-b1188918-0ac1-49b0-bd7b-04e8bd502c62.orc",
+        "rows": 892436,
+        "bytes": 67296710,
+        "physical_compression": [
+          "UNCOMPRESSED"
+        ]
+      },
+      {
+        "path": "s3://bronze/lineitem_orc_none-3037e9d508774055a169572a0df2cd38/data/20261012_135750_00006_5xri5-b8d2a94f-72a6-4476-8d05-05b6e885d768.orc",
+        "rows": 1571845,
+        "bytes": 118552783,
+        "physical_compression": [
+          "UNCOMPRESSED"
+        ]
+      },
+      {
+        "path": "s3://bronze/lineitem_orc_none-3037e9d508774055a169572a0df2cd38/data/20261012_135750_00006_5xri5-56042f65-4c72-4e39-a9cb-02d4b6df3ad6.orc",
+        "rows": 2367319,
+        "bytes": 178546175,
+        "physical_compression": [
+          "UNCOMPRESSED"
+        ]
+      }
+    ],
+    "verified": true
+  },
+  {
+    "slug": "orc_snappy",
+    "format": "orc",
+    "expected_codec": "snappy",
+    "files": [
+      {
+        "path": "s3://bronze/lineitem_orc_snappy-8989acc13c16400796a8db845a9648df/data/20261012_135906_00006_y6pvf-70d59cfe-7b7d-4cd9-bf5d-f399d89d16f2.orc",
+        "rows": 884949,
+        "bytes": 32644298,
+        "physical_compression": [
+          "SNAPPY"
+        ]
+      },
+      {
+        "path": "s3://bronze/lineitem_orc_snappy-8989acc13c16400796a8db845a9648df/data/20261012_135906_00006_y6pvf-28934014-cb20-4f17-ac32-f30a7cd55f60.orc",
+        "rows": 1173649,
+        "bytes": 43309390,
+        "physical_compression": [
+          "SNAPPY"
+        ]
+      },
+      {
+        "path": "s3://bronze/lineitem_orc_snappy-8989acc13c16400796a8db845a9648df/data/20261012_135906_00006_y6pvf-3ab95ae3-236f-4a67-8b1d-afa1cb67767e.orc",
+        "rows": 1574549,
+        "bytes": 58115328,
+        "physical_compression": [
+          "SNAPPY"
+        ]
+      },
+      {
+        "path": "s3://bronze/lineitem_orc_snappy-8989acc13c16400796a8db845a9648df/data/20261012_135906_00006_y6pvf-d150d2c8-95ca-4ac4-b54a-0882f1f02c4f.orc",
+        "rows": 2368068,
+        "bytes": 87370056,
+        "physical_compression": [
+          "SNAPPY"
+        ]
+      }
+    ],
+    "verified": true
+  },
+  {
+    "slug": "orc_gzip",
+    "format": "orc",
+    "expected_codec": "gzip",
+    "files": [
+      {
+        "path": "s3://bronze/lineitem_orc_gzip-e5725819465340249faed5d681f73325/data/20261012_140017_00006_xj4k8-f7d45f7c-5be5-44b7-9ff3-c6a2020c7972.orc",
+        "rows": 895481,
+        "bytes": 23256129,
+        "physical_compression": [
+          "ZLIB"
+        ]
+      },
+      {
+        "path": "s3://bronze/lineitem_orc_gzip-e5725819465340249faed5d681f73325/data/20261012_140017_00006_xj4k8-0a3c4177-d32b-4931-9aeb-13fc3f1e170b.orc",
+        "rows": 1166826,
+        "bytes": 30295900,
+        "physical_compression": [
+          "ZLIB"
+        ]
+      },
+      {
+        "path": "s3://bronze/lineitem_orc_gzip-e5725819465340249faed5d681f73325/data/20261012_140017_00006_xj4k8-107fbb56-4751-42fc-be69-e65213c95de5.orc",
+        "rows": 1564127,
+        "bytes": 40605294,
+        "physical_compression": [
+          "ZLIB"
+        ]
+      },
+      {
+        "path": "s3://bronze/lineitem_orc_gzip-e5725819465340249faed5d681f73325/data/20261012_140017_00006_xj4k8-0692d42c-6960-49e9-aa50-6a2b92f5b77d.orc",
+        "rows": 2374781,
+        "bytes": 61661867,
+        "physical_compression": [
+          "ZLIB"
+        ]
+      }
+    ],
+    "verified": true
+  },
+  {
+    "slug": "orc_zstd",
+    "format": "orc",
+    "expected_codec": "zstd",
+    "files": [
+      {
+        "path": "s3://bronze/lineitem_orc_zstd-fe016bc81c714578972ee0fa565a891d/data/20261012_140143_00006_i4su5-039263b0-789a-46f5-b884-e8b4c4b8c59d.orc",
+        "rows": 1173729,
+        "bytes": 31516751,
+        "physical_compression": [
+          "ZSTD"
+        ]
+      },
+      {
+        "path": "s3://bronze/lineitem_orc_zstd-fe016bc81c714578972ee0fa565a891d/data/20261012_140143_00006_i4su5-10d7ed9d-3cbb-47ca-9321-4940ad5eec74.orc",
+        "rows": 892386,
+        "bytes": 23972647,
+        "physical_compression": [
+          "ZSTD"
+        ]
+      },
+      {
+        "path": "s3://bronze/lineitem_orc_zstd-fe016bc81c714578972ee0fa565a891d/data/20261012_140143_00006_i4su5-8c0dab7d-de5e-4d1c-b616-b1ed1d3aff6e.orc",
+        "rows": 1570929,
+        "bytes": 42180925,
+        "physical_compression": [
+          "ZSTD"
+        ]
+      },
+      {
+        "path": "s3://bronze/lineitem_orc_zstd-fe016bc81c714578972ee0fa565a891d/data/20261012_140143_00006_i4su5-cec8526b-2c66-4102-b5ed-4806a3a4b88c.orc",
+        "rows": 2364171,
+        "bytes": 63473124,
+        "physical_compression": [
+          "ZSTD"
+        ]
+      }
+    ],
+    "verified": true
+  }
+]

@@ -1,0 +1,13 @@
+{
+  "format": "ORC",
+  "codec": "GZIP",
+  "sf": 1,
+  "data_bytes": 155819190,
+  "files": 4,
+  "source_rows": 6001215,
+  "meta_bytes": 8479,
+  "gb": 0.14511792920529842,
+  "write_sec": 27.78537912480533,
+  "write_query_id": "20261012_140017_00006_xj4k8",
+  "reads": []
+}

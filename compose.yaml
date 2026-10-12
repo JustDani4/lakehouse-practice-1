@@ -1,0 +1,81 @@
+name: vodnev-lakehouse
+services:
+  postgres:
+    image: postgres:17-alpine@sha256:b0f9560a2de083e2cc7382e75f808c7381a32852a7ec49117deedb300e552b24
+    environment:
+      POSTGRES_USER: lakekeeper
+      POSTGRES_PASSWORD: lakekeeper-local
+      POSTGRES_DB: lakekeeper
+    volumes: [postgres-data:/var/lib/postgresql/data]
+    healthcheck:
+      test: [CMD-SHELL, "pg_isready -U lakekeeper -d lakekeeper"]
+      interval: 3s
+      timeout: 5s
+      retries: 30
+    mem_limit: 256m
+  minio:
+    image: pgsty/silo:RELEASE.2026-09-03T13-18-01Z@sha256:b616a0cf8cb281e7e6bb3c9b1fb53875b4016a2878223925541c18f82d6c5ca3
+    command: server /data --console-address :9001
+    environment:
+      MINIO_ROOT_USER: minioadmin
+      MINIO_ROOT_PASSWORD: minioadmin
+    ports: ["127.0.0.1:19000:9000", "127.0.0.1:19001:9001"]
+    volumes: [minio-data:/data]
+    healthcheck:
+      test: [CMD, mc, ready, local]
+      interval: 3s
+      timeout: 5s
+      retries: 30
+    mem_limit: 384m
+  buckets:
+    image: pgsty/silo:RELEASE.2026-09-03T13-18-01Z@sha256:b616a0cf8cb281e7e6bb3c9b1fb53875b4016a2878223925541c18f82d6c5ca3
+    entrypoint: /bin/sh
+    command: ["-c", "mc alias set local http://minio:9000 minioadmin minioadmin && mc mb --ignore-existing local/bronze local/silver local/gold"]
+    depends_on:
+      minio: {condition: service_healthy}
+  migrate:
+    image: quay.io/lakekeeper/catalog:v0.14.0@sha256:de87eaca929f208ec0ea4594706d3d70cec50620b62fea07c17e18fdb1a4c592
+    command: migrate
+    environment: &lakekeeper-env
+      LAKEKEEPER__PG_ENCRYPTION_KEY: local-lab-encryption-key
+      LAKEKEEPER__PG_DATABASE_URL_READ: postgresql://lakekeeper:lakekeeper-local@postgres:5432/lakekeeper
+      LAKEKEEPER__PG_DATABASE_URL_WRITE: postgresql://lakekeeper:lakekeeper-local@postgres:5432/lakekeeper
+      RUST_LOG: info
+    depends_on:
+      postgres: {condition: service_healthy}
+  lakekeeper:
+    image: quay.io/lakekeeper/catalog:v0.14.0@sha256:de87eaca929f208ec0ea4594706d3d70cec50620b62fea07c17e18fdb1a4c592
+    command: serve
+    environment: *lakekeeper-env
+    ports: ["127.0.0.1:18181:8181"]
+    depends_on:
+      migrate: {condition: service_completed_successfully}
+      buckets: {condition: service_completed_successfully}
+    healthcheck:
+      test: [CMD, /home/nonroot/lakekeeper, healthcheck]
+      interval: 3s
+      timeout: 5s
+      retries: 30
+    mem_limit: 256m
+  trino:
+    image: trinodb/trino:476@sha256:00125e40d063bc4816d165482f6044872b18b56026fb959d3b28ce1f96ffbbee
+    ports: ["127.0.0.1:18080:8080"]
+    volumes: ["./catalog:/etc/trino/catalog:ro", "./trino:/etc/trino:ro"]
+    depends_on:
+      lakekeeper: {condition: service_healthy}
+    mem_limit: 2400m
+    healthcheck:
+      test: [CMD, curl, -fsS, http://localhost:8080/v1/info]
+      interval: 5s
+      timeout: 5s
+      retries: 30
+  spark:
+    image: apache/spark:3.5.7-scala2.12-java17-python3-ubuntu@sha256:7897b9a69efa94caccc52579e310a2fe68fb75b88a3d55b97b31568e5e233176
+    user: "0:0"
+    entrypoint: /bin/bash
+    command: ["-c", "sleep infinity"]
+    volumes: ["./:/workspace", "./jars:/opt/lab-jars:ro"]
+    mem_limit: 1800m
+volumes:
+  postgres-data:
+  minio-data:

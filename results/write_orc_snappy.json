@@ -1,0 +1,13 @@
+{
+  "format": "ORC",
+  "codec": "SNAPPY",
+  "sf": 1,
+  "data_bytes": 221439072,
+  "files": 4,
+  "source_rows": 6001215,
+  "meta_bytes": 8507,
+  "gb": 0.20623120665550232,
+  "write_sec": 18.943956666160375,
+  "write_query_id": "20261012_135906_00006_y6pvf",
+  "reads": []
+}

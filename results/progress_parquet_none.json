@@ -1,0 +1,43 @@
+{
+  "format": "PARQUET",
+  "codec": "NONE",
+  "sf": 1,
+  "data_bytes": 375162561,
+  "files": 4,
+  "source_rows": 6001215,
+  "meta_bytes": 8834,
+  "gb": 0.3493973622098565,
+  "write_sec": 36.37143537495285,
+  "write_query_id": "20261012_135223_00012_99kr8",
+  "reads": [
+    {
+      "repeat": 1,
+      "cold_sec": 3.646618583239615,
+      "warm_sec": 2.180931624956429,
+      "cold_query_id": "20261012_140316_00003_tua8y",
+      "warm_query_id": "20261012_140320_00004_tua8y",
+      "rows": 57,
+      "sha256": "e539f1cadf0f130d11445dfe2018f1a843d45562b57cb848b43c6b454e43137c"
+    },
+    {
+      "repeat": 2,
+      "cold_sec": 4.274278165772557,
+      "warm_sec": 2.547043875325471,
+      "cold_query_id": "20261012_140333_00003_43vyz",
+      "warm_query_id": "20261012_140337_00004_43vyz",
+      "rows": 57,
+      "sha256": "e539f1cadf0f130d11445dfe2018f1a843d45562b57cb848b43c6b454e43137c"
+    },
+    {
+      "repeat": 3,
+      "cold_sec": 3.819464665837586,
+      "warm_sec": 2.5587766668759286,
+      "cold_query_id": "20261012_140351_00003_ucvdz",
+      "warm_query_id": "20261012_140355_00004_ucvdz",
+      "rows": 57,
+      "sha256": "e539f1cadf0f130d11445dfe2018f1a843d45562b57cb848b43c6b454e43137c"
+    }
+  ],
+  "cold_sec": 3.564498582854867,
+  "warm_sec": 1.7334541250020266
+}

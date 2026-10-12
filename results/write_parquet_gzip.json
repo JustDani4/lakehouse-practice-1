@@ -1,0 +1,13 @@
+{
+  "format": "PARQUET",
+  "codec": "GZIP",
+  "sf": 1,
+  "data_bytes": 149524244,
+  "files": 4,
+  "source_rows": 6001215,
+  "meta_bytes": 8824,
+  "gb": 0.13925530388951302,
+  "write_sec": 27.883007375057787,
+  "write_query_id": "20261012_135530_00006_c2gra",
+  "reads": []
+}

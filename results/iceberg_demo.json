@@ -1,0 +1,122 @@
+{
+  "schema_before": [
+    [
+      "custkey",
+      "bigint",
+      "",
+      ""
+    ],
+    [
+      "name",
+      "varchar",
+      "",
+      ""
+    ]
+  ],
+  "schema_after": [
+    [
+      "custkey",
+      "bigint",
+      "",
+      ""
+    ],
+    [
+      "name",
+      "varchar",
+      "",
+      ""
+    ],
+    [
+      "customer_tier",
+      "varchar",
+      "",
+      ""
+    ]
+  ],
+  "snapshot_id": 5721332390894574272,
+  "baseline": [
+    [
+      1,
+      "Customer#000000001"
+    ],
+    [
+      2,
+      "Customer#000000002"
+    ],
+    [
+      3,
+      "Customer#000000003"
+    ]
+  ],
+  "changed": [
+    [
+      1,
+      "TEMPORARY CHANGE"
+    ],
+    [
+      2,
+      "Customer#000000002"
+    ],
+    [
+      3,
+      "Customer#000000003"
+    ]
+  ],
+  "historical": [
+    [
+      1,
+      "Customer#000000001"
+    ],
+    [
+      2,
+      "Customer#000000002"
+    ],
+    [
+      3,
+      "Customer#000000003"
+    ]
+  ],
+  "restored": [
+    [
+      1,
+      "Customer#000000001"
+    ],
+    [
+      2,
+      "Customer#000000002"
+    ],
+    [
+      3,
+      "Customer#000000003"
+    ]
+  ],
+  "snapshots": [
+    [
+      "2026-10-12T17:04:36.813000+03:00",
+      5721332390894574272,
+      null,
+      "append"
+    ],
+    [
+      "2026-10-12T17:04:37.592000+03:00",
+      447019152695164062,
+      5721332390894574272,
+      "overwrite"
+    ]
+  ],
+  "added_column_values": [
+    [
+      1,
+      null
+    ],
+    [
+      2,
+      null
+    ],
+    [
+      3,
+      null
+    ]
+  ],
+  "verified": true
+}
